@@ -85,7 +85,7 @@ export default function Footer(): JSX.Element {
                   <div className="contact-section">
                     <h5>🤝 Start a Conversation</h5>
                     <a
-                      href="mailto:hello@blackoakcapital.com?subject=Partnership%20Discussion"
+                      href="mailto:contact@blackoak.capital?subject=Ready%20to%20Pitch%20Ideas%20-%20Seeking%20Investment%20Support"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="cta-btn primary"
