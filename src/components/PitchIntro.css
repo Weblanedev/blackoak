@@ -138,6 +138,65 @@
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Allow Tailwind utility classes to override custom CSS */
+.floating-card.mb-8 {
+  margin-bottom: 4rem !important;
+}
+
+.floating-card.border-red-500 {
+  border-color: #ef4444 !important;
+}
+
+.floating-card.border-blue-500 {
+  border-color: #3b82f6 !important;
+}
+
+.floating-card.border-green-500 {
+  border-color: #22c55e !important;
+}
+
+/* Allow Tailwind background classes to work */
+.floating-card.bg-blue-50 {
+  background-color: #eff6ff !important;
+}
+
+.floating-card.bg-red-50 {
+  background-color: #fef2f2 !important;
+}
+
+.floating-card.bg-green-50 {
+  background-color: #f0fdf4 !important;
+}
+
+/* Allow Tailwind text color classes to work */
+.floating-card .text-blue-900 {
+  color: #1e3a8a !important;
+}
+
+.floating-card .text-blue-700 {
+  color: #1d4ed8 !important;
+}
+
+.floating-card .text-red-900 {
+  color: #7f1d1d !important;
+}
+
+.floating-card .text-red-700 {
+  color: #b91c1c !important;
+}
+
+.floating-card .text-green-900 {
+  color: #14532d !important;
+}
+
+.floating-card .text-green-700 {
+  color: #15803d !important;
+}
+
+.floating-card .font-bold {
+  font-weight: 700 !important;
+}
+
 .card-1 {
   top: 20px;
   left: 20px;

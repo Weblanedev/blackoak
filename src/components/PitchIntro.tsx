@@ -73,7 +73,7 @@ export default function PitchIntro(): JSX.Element {
                   </div>
                 </div>
 
-                <div className="floating-card card-3">
+                <div className="floating-card card-3 mb-8">
                   <div className="card-icon">📊</div>
                   <div className="card-content">
                     <h4>Growth</h4>
