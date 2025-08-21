@@ -213,7 +213,7 @@ export default function Hero(): JSX.Element {
                 className="pill"
                 style={{ fontSize: "14px", padding: "8px 16px" }}
               >
-                Ticket: $100k–$1.5m
+                Up to $10k worth of investment
               </div>
               <div
                 className="pill"
