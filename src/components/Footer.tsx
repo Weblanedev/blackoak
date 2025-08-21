@@ -38,67 +38,35 @@ export default function Footer(): JSX.Element {
             <div className="footer-section investment-focus">
               <h4>🎯 Investment Focus</h4>
               <ul className="focus-list">
-                {/* <li>
-                  <span className="focus-icon">🚀</span>
-                  <div>
-                    <strong>Early Stage</strong>
-                    <span>Seed to Series A</span>
-                  </div>
-                </li> */}
                 <li>
-                  <span className="focus-icon">💰</span>
+                  <span className="focus-icon">💳</span>
                   <div>
                     <strong>Fintech</strong>
-                    <span>Banking & Payments</span>
+                    <span>Payments & Banking</span>
                   </div>
                 </li>
                 <li>
-                  <span className="focus-icon">🌱</span>
-                  <div>
-                    <strong>Sustainability</strong>
-                    <span>Clean Energy & Tech</span>
-                  </div>
-                </li>
-                {/* <li>
                   <span className="focus-icon">🎓</span>
                   <div>
-                    <strong>EdTech</strong>
-                    <span>Future of Learning</span>
+                    <strong>Education</strong>
+                    <span>Learning & Talent</span>
                   </div>
-                </li> */}
+                </li>
+                <li>
+                  <span className="focus-icon">⚡</span>
+                  <div>
+                    <strong>Energy</strong>
+                    <span>Clean Tech</span>
+                  </div>
+                </li>
+                <li>
+                  <span className="focus-icon">🌍</span>
+                  <div>
+                    <strong>Infrastructure</strong>
+                    <span>Digital Foundation</span>
+                  </div>
+                </li>
               </ul>
-            </div>
-
-            {/* Portfolio Highlights Section */}
-            <div className="footer-section portfolio-highlights">
-              <h4>🏆 Portfolio Highlights</h4>
-              <div className="portfolio-stats">
-                <div className="stat-item">
-                  <div className="stat-number">$2.5B+</div>
-                  <div className="stat-label">Portfolio Value</div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-number">45+</div>
-                  <div className="stat-label">Companies</div>
-                </div>
-                {/* <div className="stat-item">
-                  <div className="stat-number">12</div>
-                  <div className="stat-label">Exits</div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-number">8</div>
-                  <div className="stat-label">Unicorns</div>
-                </div> */}
-              </div>
-              {/* <div className="featured-companies">
-                <span className="featured-label">Featured:</span>
-                <div className="company-tags">
-                  <span className="company-tag">PayFlow</span>
-                  <span className="company-tag">EduTech</span>
-                  <span className="company-tag">GreenBank</span>
-                  <span className="company-tag">AI Finance</span>
-                </div>
-              </div> */}
             </div>
           </div>
 
@@ -136,46 +104,13 @@ export default function Footer(): JSX.Element {
       {/* Footer Bottom */}
       <div className="footer-bottom">
         <div className="container">
-          <div className="footer-bottom-content">
-            <div className="footer-links">
-              <a className="footer-link">Privacy Policy</a>
-              <a className="footer-link">Terms of Service</a>
-              <a className="footer-link">Cookie Policy</a>
-              <a className="footer-link">Accessibility</a>
-            </div>
+          <div className="footer-bottom-content text-center">
             <div className="footer-legal">
               <p>&copy; 2024 Blackoak Capital. All rights reserved.</p>
-              <p className="legal-note">
-                Blackoak Capital is a registered investment advisor
-              </p>
-            </div>
-            <div className="footer-badges">
-              <div className="badge">
-                <span className="badge-icon">✅</span>
-                <span>SEC Registered</span>
-              </div>
-              <div className="badge">
-                <span className="badge-icon">🌱</span>
-                <span>ESG Focused</span>
-              </div>
-              {/* <div className="badge">
-                <span className="badge-icon">🏆</span>
-                <span>Top 100 VC</span>
-              </div> */}
             </div>
           </div>
         </div>
       </div>
-
-      {/* Decorative Elements */}
-      {/* <div className="footer-decoration">
-        <div className="decoration-line"></div>
-        <div className="decoration-dots">
-          <span className="dot"></span>
-          <span className="dot"></span>
-          <span className="dot"></span>
-        </div>
-      </div> */}
     </footer>
   );
 }

@@ -399,10 +399,10 @@ export default function Contact(): JSX.Element {
                     </div>
                   </div>
 
-                  {/* Section 3: Funding & Strategy */}
+                  {/* Section 3: Growth & Strategy */}
                   <div className="form-section-header">
-                    <h4>💰 Funding & Strategy</h4>
-                    <p>Investment details and strategic focus</p>
+                    <h4>🚀 Growth & Strategy</h4>
+                    <p>Growth details and strategic focus</p>
                   </div>
 
                   <div className="form-grid">
@@ -466,7 +466,7 @@ export default function Contact(): JSX.Element {
                               : ""
                           }`}
                         >
-                          Funding Amount
+                          Growth Stage
                         </label>
                       </div>
                     </div>
@@ -494,7 +494,7 @@ export default function Contact(): JSX.Element {
                               : ""
                           }`}
                         >
-                          Use of Funds
+                          Growth Plans
                         </label>
                       </div>
                     </div>

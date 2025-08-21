@@ -217,8 +217,8 @@ export default function Thesis() {
                   >
                     A young, mobile-first population and under-penetrated
                     infrastructure create outsized opportunities for software.
-                    We lead or follow with meaningful reserves, back exceptional
-                    founders early, and help them win.
+                    We help founders define their vision, validate concepts, and
+                    build the foundation for scalable solutions.
                   </p>
                 </div>
 

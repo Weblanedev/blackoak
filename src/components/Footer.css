@@ -4,27 +4,27 @@
   border-top: 1px solid var(--border);
   position: relative;
   overflow: hidden;
-  padding: 80px 0 60px;
+  padding: 50px 0 40px;
 }
 
 /* Footer Content Grid */
 .footer-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 60px;
-  position: relative;
-  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 30px;
 }
 
 /* Footer Interactive Section */
 .footer-interactive {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 /* Company Info Section */
 .company-info {
-  max-width: 320px;
+  flex: 1;
+  max-width: 400px;
 }
 
 .footer-logo {
@@ -87,6 +87,12 @@
 }
 
 /* Investment Focus Section */
+.investment-focus {
+  flex-shrink: 0;
+
+  text-align: center;
+}
+
 .investment-focus h4 {
   color: var(--text);
   font-size: 1.2rem;
@@ -99,19 +105,24 @@
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 500px;
 }
 
 .focus-list li {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
+  gap: 16px;
+  padding: 16px 20px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  border-radius: 16px;
   transition: all 0.3s ease;
+  flex: 0 0 calc(50% - 8px);
+  min-width: 200px;
 }
 
 .focus-list li:hover {
@@ -121,25 +132,91 @@
 }
 
 .focus-icon {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   flex-shrink: 0;
 }
 
 .focus-list li div {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
 }
 
 .focus-list li strong {
   color: var(--text);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 .focus-list li span:last-child {
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+}
+
+/* Portfolio Highlights Section */
+.portfolio-highlights {
+  margin-left: auto;
+  text-align: right;
+}
+
+.portfolio-highlights h4 {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.portfolio-focus-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.focus-row {
+  display: flex;
+  gap: 20px;
+}
+
+.focus-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  min-width: 140px;
+}
+
+.focus-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.focus-item .focus-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.focus-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.focus-item strong {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.focus-item span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.2;
 }
 
 /* Portfolio Highlights Section */
@@ -424,10 +501,14 @@
 }
 
 .footer-bottom-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 40px;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .footer-links {
@@ -672,4 +753,67 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolio-highlights {
+    margin-left: 0;
+    text-align: left;
+    margin-top: 30px;
+  }
+
+  .focus-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .focus-item {
+    min-width: auto;
+  }
+}
+
+/* Responsive adjustments for focus list */
+@media (max-width: 768px) {
+  .investment-focus {
+    margin-left: 0;
+    text-align: left;
+    margin-top: 30px;
+  }
+
+  .focus-list {
+    flex-direction: column;
+  }
+
+  .focus-list li {
+    min-width: auto;
+    flex: none;
+  }
+}
+
+/* Responsive Footer Layout */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .company-info {
+    max-width: none;
+    text-align: center;
+  }
+
+  .investment-focus {
+    text-align: center;
+  }
+
+  .focus-list {
+    flex-direction: column;
+    max-width: none;
+  }
+
+  .focus-list li {
+    flex: none;
+    min-width: auto;
+  }
 }

@@ -31,93 +31,24 @@ export default function ContactPage(): JSX.Element {
             </p>
           </Reveal>
 
-          {/* Interactive Contact Options */}
-          {/* <Reveal delayMs={240}>
-            <div className="contact-options">
-              <div className="contact-option founders">
-                <div className="option-header">
-                  <div className="option-icon">👨‍💻</div>
-                  <h3>Founders & Entrepreneurs</h3>
-                  <p>Got a game-changing idea? Let's make it happen!</p>
-                </div>
-                <div className="option-features">
-                  <div className="feature">
-                    <span className="feature-icon">📊</span>
-                    <span>Send your pitch deck or executive summary</span>
-                  </div>
-                  <div className="feature">
-                    <span className="feature-icon">🎯</span>
-                    <span>Get feedback within 48 hours</span>
-                  </div>
-                  <div className="feature">
-                    <span className="feature-icon">🚀</span>
-                    <span>Access to our founder community</span>
-                  </div>
-                  <div className="feature">
-                    <span className="feature-icon">💡</span>
-                    <span>Strategic guidance & mentorship</span>
-                  </div>
-                </div>
-                <div className="option-cta">
-                  <a href="#contact-form" className="btn btn-primary">
-                    Pitch Your Vision 🚀
-                  </a>
-                  <span className="response-time">Response in 48h ⚡</span>
-                </div>
-              </div>
-
-              <div className="contact-option partners">
-                <div className="option-header">
-                  <div className="option-icon">🤝</div>
-                  <h3>LPs & Strategic Partners</h3>
-                  <p>Let's explore synergies and build together!</p>
-                </div>
-                <div className="option-features">
-                  <div className="feature">
-                    <span className="feature-icon">💼</span>
-                    <span>Co-investment opportunities</span>
-                  </div>
-                  <div className="feature">
-                    <span className="feature-icon">🌍</span>
-                    <span>Access to African tech ecosystem</span>
-                  </div>
-                  <div className="feature">
-                    <span className="feature-icon">📈</span>
-                    <span>Portfolio company introductions</span>
-                  </div>
-                  <div className="feature">
-                    <span className="feature-icon">🔗</span>
-                    <span>Network & partnership building</span>
-                  </div>
-                </div>
-                <div className="option-cta">
-                  <a href="#contact-form" className="btn btn-primary">
-                    Let's Connect 🤝
-                  </a>
-                  <span className="response-time">Response in 24h ⚡</span>
-                </div>
-              </div>
-            </div>
-          </Reveal> */}
-
           {/* Fun Stats & Social Proof */}
           <Reveal delayMs={360}>
             <div className="fun-stats">
               <div className="stat-item">
-                <div className="stat-number">48h</div>
-                <div className="stat-label">Average Response Time</div>
+                <div className="stat-number">Strategic</div>
+                <div className="stat-label">Partnership Approach</div>
               </div>
               <div className="stat-item">
                 <div className="stat-number">100%</div>
                 <div className="stat-label">Founder Satisfaction</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">15+</div>
-                <div className="stat-label">Years of Experience</div>
+                <div className="stat-number">Proven Track Record</div>
+                <div className="stat-label">Excellence</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">$50M+</div>
-                <div className="stat-label">Capital Deployed</div>
+                <div className="stat-number">Growing Network</div>
+                <div className="stat-label">Companies Supported</div>
               </div>
             </div>
           </Reveal>

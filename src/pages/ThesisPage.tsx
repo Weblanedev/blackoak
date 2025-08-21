@@ -15,7 +15,7 @@ export default function ThesisPage(): JSX.Element {
           </Reveal>
           <Reveal delayMs={120}>
             <p className="subtitle">
-              Our investment thesis centers on backing foundational software and
+              Our approach centers on backing foundational software and
               infrastructure that will power Africa's digital economy for
               decades to come.
             </p>
@@ -32,8 +32,8 @@ export default function ThesisPage(): JSX.Element {
                 <span className="stat-label">Mobile Penetration</span>
               </div>
               <div className="hero-stat">
-                <span className="stat-number">$115B</span>
-                <span className="stat-label">Digital Economy</span>
+                <span className="stat-number">1.4B</span>
+                <span className="stat-label">Population</span>
               </div>
             </div>
           </Reveal>
@@ -264,8 +264,8 @@ export default function ThesisPage(): JSX.Element {
                     them through multiple funding rounds and growth stages.
                   </p>
                   <div className="strategy-metric">
-                    <span className="metric-value">5+</span>
-                    <span className="metric-label">Years Avg.</span>
+                    <span className="metric-value">Strategic</span>
+                    <span className="metric-label">Partnership</span>
                   </div>
                 </div>
               </div>
@@ -365,8 +365,8 @@ export default function ThesisPage(): JSX.Element {
                     <span className="label">Under 25</span>
                   </div>
                   <div className="opportunity-stat">
-                    <span className="number">$115B</span>
-                    <span className="label">Digital Economy</span>
+                    <span className="number">1.4B</span>
+                    <span className="label">Population</span>
                   </div>
                 </div>
 
@@ -444,9 +444,8 @@ export default function ThesisPage(): JSX.Element {
                 <div className="help-content">
                   <h3>Strategic Capital</h3>
                   <p>
-                    We lead or follow with meaningful reserves, ensuring
-                    companies have the runway to execute their vision and reach
-                    key milestones.
+                    Adequate funding to ensure companies can execute their
+                    vision and reach key milestones.
                   </p>
                   <div className="help-metric">
                     <span className="metric-icon">💎</span>
@@ -536,7 +535,7 @@ export default function ThesisPage(): JSX.Element {
                   <h3>Regulatory Navigation</h3>
                   <p>
                     Navigate complex regulatory environments with insights from
-                    our network of legal and compliance experts.
+                    our network of legal experts.
                   </p>
                   <div className="help-metric">
                     <span className="metric-icon">📋</span>

@@ -11,7 +11,7 @@ export default function PortfolioPage(): JSX.Element {
       <section className="portfolio-hero">
         <div className="container">
           <Reveal>
-            <h1>Our Investment Portfolio</h1>
+            <h1>Our Portfolio Companies</h1>
           </Reveal>
           <Reveal delayMs={120}>
             <p className="subtitle">
@@ -70,8 +70,8 @@ export default function PortfolioPage(): JSX.Element {
                   <p className="company-description">
                     Revolutionizing Africa's financial services through
                     blockchain payments, core banking systems, and regulatory
-                    compliance solutions. Serving 50+ financial institutions
-                    with $5.7M+ combined revenue.
+                    compliance solutions. Serving 50+ financial institutions and
+                    millions of users across the continent.
                   </p>
                 </div>
               </Reveal>
@@ -150,7 +150,7 @@ export default function PortfolioPage(): JSX.Element {
                 marginBottom: "24px",
               }}
             >
-              Investment Stages
+              Company Stages
             </h2>
           </Reveal>
           <Reveal delayMs={120}>
@@ -164,7 +164,7 @@ export default function PortfolioPage(): JSX.Element {
               }}
             >
               We invest across different stages of company development,
-              providing the right level of support and capital for each growth
+              providing the right level of support and guidance for each growth
               phase.
             </p>
           </Reveal>
@@ -190,7 +190,7 @@ export default function PortfolioPage(): JSX.Element {
                   <h4>Seed Stage</h4>
                   <p>
                     Early-stage companies with innovative ideas and strong
-                    founding teams. We provide initial capital and strategic
+                    founding teams. We provide initial support and strategic
                     guidance to help validate concepts.
                   </p>
                   <div className="stage-details">

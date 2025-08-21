@@ -1,5 +1,6 @@
 import Reveal from "../components/Reveal";
 import Navbar from "../components/Navbar";
+import digitalAfriImage from "../assets/digital-afri.png";
 import "./SectorsPage.css";
 
 export default function SectorsPage(): JSX.Element {
@@ -11,7 +12,7 @@ export default function SectorsPage(): JSX.Element {
       <section className="sectors-hero">
         <div className="container">
           <Reveal>
-            <h1>Strategic Investment Sectors</h1>
+            <h1>Strategic Focus Sectors</h1>
           </Reveal>
           <Reveal delayMs={120}>
             <p className="subtitle">
@@ -27,15 +28,7 @@ export default function SectorsPage(): JSX.Element {
       <section className="sectors-overview">
         <div className="container">
           <Reveal>
-            <h2
-              style={{
-                textAlign: "center",
-                fontSize: "2.5rem",
-                marginBottom: "24px",
-              }}
-            >
-              Our Core Investment Focus
-            </h2>
+            <h2>Our Core Focus Areas</h2>
           </Reveal>
           <Reveal delayMs={120}>
             <p
@@ -66,24 +59,16 @@ export default function SectorsPage(): JSX.Element {
                   infrastructure.
                 </p>
                 <div className="sector-features">
+                  {/* <div className="feature-item">
+                    <div className="feature-dot"></div>
+                    <span className="feature-text">
+                      Cross-border Transactions
+                    </span>
+                  </div> */}
                   <div className="feature-item">
                     <div className="feature-dot"></div>
-                    <span className="feature-text">
-                      Digital Payments & Wallets
-                    </span>
+                    <span className="feature-text">Digital Payments</span>
                   </div>
-                  {/* <div className="feature-item">
-                    <div className="feature-dot"></div>
-                    <span className="feature-text">
-                      Lending & Credit Solutions
-                    </span>
-                  </div> */}
-                  {/* <div className="feature-item">
-                    <div className="feature-dot"></div>
-                    <span className="feature-text">
-                      B2B Financial Infrastructure
-                    </span>
-                  </div> */}
                   <div className="feature-item">
                     <div className="feature-dot"></div>
                     <span className="feature-text">
@@ -91,15 +76,8 @@ export default function SectorsPage(): JSX.Element {
                     </span>
                   </div>
                 </div>
-                <div className="sector-stats">
-                  <div className="sector-stat">
-                    <span className="number">$115B</span>
-                    <span className="label">Market Size</span>
-                  </div>
-                  <div className="sector-stat">
-                    <span className="number">60%</span>
-                    <span className="label">Growth Rate</span>
-                  </div>
+                <div className="sector-label">
+                  <span className="label-text">1.4B Population</span>
                 </div>
               </div>
             </Reveal>
@@ -115,14 +93,6 @@ export default function SectorsPage(): JSX.Element {
                   regulatory compliance, and identity verification solutions.
                 </p>
                 <div className="sector-features">
-                  {/* <div className="feature-item">
-                    <div className="feature-dot"></div>
-                    <span className="feature-text">Core Banking Systems</span>
-                  </div>
-                  <div className="feature-item">
-                    <div className="feature-dot"></div>
-                    <span className="feature-text">Regulatory Compliance</span>
-                  </div> */}
                   <div className="feature-item">
                     <div className="feature-dot"></div>
                     <span className="feature-text">KYC/AML Solutions</span>
@@ -132,15 +102,8 @@ export default function SectorsPage(): JSX.Element {
                     <span className="feature-text">Banking Infrastructure</span>
                   </div>
                 </div>
-                <div className="sector-stats">
-                  <div className="sector-stat">
-                    <span className="number">$85B</span>
-                    <span className="label">Market Size</span>
-                  </div>
-                  <div className="sector-stat">
-                    <span className="number">45%</span>
-                    <span className="label">Growth Rate</span>
-                  </div>
+                <div className="sector-label">
+                  <span className="label-text">54 Countries</span>
                 </div>
               </div>
             </Reveal>
@@ -174,15 +137,8 @@ export default function SectorsPage(): JSX.Element {
                     <span className="feature-text">Skills Assessment</span>
                   </div> */}
                 </div>
-                <div className="sector-stats">
-                  <div className="sector-stat">
-                    <span className="number">$65B</span>
-                    <span className="label">Market Size</span>
-                  </div>
-                  <div className="sector-stat">
-                    <span className="number">55%</span>
-                    <span className="label">Growth Rate</span>
-                  </div>
+                <div className="sector-label">
+                  <span className="label-text">80% Mobile Penetration</span>
                 </div>
               </div>
             </Reveal>
@@ -216,15 +172,8 @@ export default function SectorsPage(): JSX.Element {
                     <span className="feature-text">Smart Infrastructure</span>
                   </div>
                 </div>
-                <div className="sector-stats">
-                  <div className="sector-stat">
-                    <span className="number">$95B</span>
-                    <span className="label">Market Size</span>
-                  </div>
-                  <div className="sector-stat">
-                    <span className="number">70%</span>
-                    <span className="label">Growth Rate</span>
-                  </div>
+                <div className="sector-label">
+                  <span className="label-text">60% Youth Population</span>
                 </div>
               </div>
             </Reveal>
@@ -243,7 +192,7 @@ export default function SectorsPage(): JSX.Element {
                 marginBottom: "24px",
               }}
             >
-              Investment Approach by Sector
+              Approach by Sector
             </h2>
           </Reveal>
           <Reveal delayMs={120}>
@@ -256,8 +205,8 @@ export default function SectorsPage(): JSX.Element {
                 margin: "0 auto 60px auto",
               }}
             >
-              Each sector requires a tailored investment strategy based on
-              market dynamics, regulatory environment, and growth potential.
+              Each sector requires a tailored approach based on market dynamics,
+              regulatory environment, and growth potential.
             </p>
           </Reveal>
 
@@ -376,17 +325,48 @@ export default function SectorsPage(): JSX.Element {
       {/* Market Analysis */}
       <section className="market-analysis">
         <div className="container">
-          <Reveal>
-            <h2
+          <div
+            style={{
+              position: "relative",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginBottom: "24px",
+              marginTop: "-20px",
+            }}
+          >
+            <Reveal>
+              <h2
+                style={{
+                  fontSize: "2.5rem",
+                  margin: 0,
+                }}
+              >
+                Sector Market Analysis
+              </h2>
+            </Reveal>
+            <div
+              className="section-label"
               style={{
-                textAlign: "center",
-                fontSize: "2.5rem",
-                marginBottom: "24px",
+                background:
+                  "linear-gradient(135deg, var(--accent), var(--accent-2))",
+                color: "white",
+                padding: "12px 20px",
+                borderRadius: "25px",
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                fontSize: "0.9rem",
+                fontWeight: "600",
+                boxShadow: "0 8px 25px rgba(43, 212, 167, 0.3)",
+                whiteSpace: "nowrap",
+                marginTop: "-40px",
               }}
             >
-              Sector Market Analysis
-            </h2>
-          </Reveal>
+              <span className="highlight-icon">📈</span>
+              <span className="highlight-text">Market Growth Trends</span>
+            </div>
+          </div>
           <Reveal delayMs={120}>
             <p
               style={{
@@ -409,9 +389,10 @@ export default function SectorsPage(): JSX.Element {
                 <h3>Market Growth Trends</h3>
                 <p>
                   Africa's digital transformation is creating unprecedented
-                  opportunities across all sectors. Fintech leads with 60%
-                  annual growth, followed by energy infrastructure at 70%,
-                  education at 55%, and banking at 45%.
+                  opportunities across all sectors. The technology sector shows
+                  remarkable expansion with significant growth in fintech,
+                  energy infrastructure, education technology, and digital
+                  banking solutions.
                 </p>
                 <p>
                   The combination of rapid urbanization, increasing internet
@@ -437,23 +418,32 @@ export default function SectorsPage(): JSX.Element {
             </Reveal>
 
             <Reveal delayMs={360}>
-              <div className="analysis-chart">
+              <div className="analysis-visual">
                 <div className="chart-container">
-                  <div className="chart-bar fintech">
-                    <div className="chart-label">Fintech</div>
-                  </div>
-                  <div className="chart-bar banking">
-                    <div className="chart-label">Banking</div>
-                  </div>
-                  <div className="chart-bar education">
-                    <div className="chart-label">Education</div>
-                  </div>
-                  <div className="chart-bar energy">
-                    <div className="chart-label">Energy</div>
-                  </div>
-                  <div className="chart-bar health">
-                    <div className="chart-label">Health</div>
-                  </div>
+                  <img
+                    src={digitalAfriImage}
+                    alt="Digital Africa Market Growth"
+                    className="growth-chart-image"
+                    style={{
+                      width: "100%",
+                      maxWidth: "900px",
+                      maxHeight: "500px",
+                      height: "auto",
+                      borderRadius: "0",
+                      boxShadow: "none",
+                      border: "none",
+                      transition: "all 0.3s ease",
+                      cursor: "pointer",
+                      margin: "20px 0",
+                      objectFit: "contain",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "scale(1.02)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "scale(1)";
+                    }}
+                  />
                 </div>
               </div>
             </Reveal>
@@ -466,7 +456,7 @@ export default function SectorsPage(): JSX.Element {
         <div className="container">
           <div className="cta-content">
             <Reveal>
-              <h2>Ready to Explore Investment Opportunities?</h2>
+              <h2>Ready to Explore Opportunities?</h2>
             </Reveal>
             <Reveal delayMs={120}>
               <p>

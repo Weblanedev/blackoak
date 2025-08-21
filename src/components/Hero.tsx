@@ -213,7 +213,7 @@ export default function Hero(): JSX.Element {
                 className="pill"
                 style={{ fontSize: "14px", padding: "8px 16px" }}
               >
-                Up to $10k worth of investment
+                Early-stage support
               </div>
               <div
                 className="pill"
@@ -625,7 +625,7 @@ export default function Hero(): JSX.Element {
                         marginBottom: "4px",
                       }}
                     >
-                      $15M+
+                      25+
                     </div>
                     <div
                       style={{
@@ -633,7 +633,7 @@ export default function Hero(): JSX.Element {
                         color: "rgba(255,255,255,0.6)",
                       }}
                     >
-                      Invested
+                      Companies
                     </div>
                   </div>
                 </div>

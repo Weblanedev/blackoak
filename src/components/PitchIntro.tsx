@@ -14,41 +14,41 @@ export default function PitchIntro(): JSX.Element {
                 <h3>Why Venture Capital?</h3>
                 <p>
                   Venture capital isn't just about funding—it's about building
-                  the future together. We provide more than capital; we offer
-                  strategic guidance, operational support, and access to a
-                  network of founders, investors, and industry experts.
+                  the future together. We provide strategic guidance, industry
+                  connections, and operational support to help founders scale
+                  their vision into reality.
                 </p>
                 <div className="insight-stats">
                   <div className="stat-item">
-                    <span className="stat-number">15+</span>
-                    <span className="stat-label">Years Experience</span>
+                    <span className="stat-number">Strategic Support</span>
+                    <span className="stat-label">Beyond Capital</span>
                   </div>
                   <div className="stat-item">
-                    <span className="stat-number">$50M+</span>
-                    <span className="stat-label">Capital Deployed</span>
+                    <span className="stat-number">Industry Network</span>
+                    <span className="stat-label">Connections & Access</span>
                   </div>
                 </div>
               </div>
 
               <div className="insight-card">
                 <div className="insight-icon">🌍</div>
-                <h3>Africa's Digital Revolution</h3>
+                <h3>Access to Opportunities</h3>
                 <p>
-                  Africa is experiencing unprecedented digital transformation.
-                  With 1.4 billion people and rapidly growing internet adoption,
-                  the continent presents unique opportunities for innovative
-                  solutions in fintech, education, and energy.
+                  Venture capital opens doors to markets, talent, and resources
+                  that would otherwise be out of reach. We help founders access
+                  the African ecosystem and connect with the right partners to
+                  accelerate growth.
                 </p>
                 <div className="growth-metrics">
                   <div className="metric">
-                    <span className="metric-value">100%</span>
+                    <span className="metric-value">Market Access</span>
                     <span className="metric-label">
-                      Internet Penetration Growth
+                      Regional & Global Reach
                     </span>
                   </div>
                   <div className="metric">
-                    <span className="metric-value">$115B</span>
-                    <span className="metric-label">Digital Economy Value</span>
+                    <span className="metric-value">Talent Network</span>
+                    <span className="metric-label">Expert Connections</span>
                   </div>
                 </div>
               </div>
@@ -84,32 +84,40 @@ export default function PitchIntro(): JSX.Element {
 
               <div className="analytics-showcase">
                 <h3>Our Investment Focus</h3>
-                <div className="analytics-grid">
-                  <div className="analytics-item">
-                    <div className="analytics-chart">
-                      <div className="chart-bar" style={{ height: "80%" }}>
-                        <span className="chart-value">80%</span>
-                      </div>
+                <div className="pie-chart-container">
+                  <div className="pie-chart">
+                    <div
+                      className="pie-segment fintech"
+                      style={{ transform: "rotate(0deg)" }}
+                    >
+                      <div className="segment-label">Fintech & Banking</div>
                     </div>
-                    <span className="analytics-label">Fintech & Banking</span>
+                    <div
+                      className="pie-segment education"
+                      style={{ transform: "rotate(120deg)" }}
+                    >
+                      <div className="segment-label">Education</div>
+                    </div>
+                    <div
+                      className="pie-segment energy"
+                      style={{ transform: "rotate(240deg)" }}
+                    >
+                      <div className="segment-label">Energy</div>
+                    </div>
                   </div>
-
-                  <div className="analytics-item">
-                    <div className="analytics-chart">
-                      <div className="chart-bar" style={{ height: "65%" }}>
-                        <span className="chart-value">65%</span>
-                      </div>
+                  <div className="pie-legend">
+                    <div className="legend-item">
+                      <div className="legend-color fintech"></div>
+                      <span>Fintech & Banking</span>
                     </div>
-                    <span className="analytics-label">Education</span>
-                  </div>
-
-                  <div className="analytics-item">
-                    <div className="analytics-chart">
-                      <div className="chart-bar" style={{ height: "55%" }}>
-                        <span className="chart-value">55%</span>
-                      </div>
+                    <div className="legend-item">
+                      <div className="legend-color education"></div>
+                      <span>Education</span>
                     </div>
-                    <span className="analytics-label">Energy</span>
+                    <div className="legend-item">
+                      <div className="legend-color energy"></div>
+                      <span>Energy</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -129,7 +137,7 @@ export default function PitchIntro(): JSX.Element {
               <div className="cta-features">
                 <div className="cta-feature">
                   <span className="feature-icon">⚡</span>
-                  <span>Quick Response (Within 1 Week)</span>
+                  <span>Quick Response</span>
                 </div>
                 <div className="cta-feature">
                   <span className="feature-icon">🔒</span>
