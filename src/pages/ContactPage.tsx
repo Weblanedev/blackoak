@@ -1,4 +1,3 @@
-import React from "react";
 import Contact from "../components/Contact";
 import Reveal from "../components/Reveal";
 import Navbar from "../components/Navbar";

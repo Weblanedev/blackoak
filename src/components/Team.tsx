@@ -1,4 +1,3 @@
-import React from "react";
 import { getAssetUrl } from "../lib/images";
 
 export default function Team(): JSX.Element {

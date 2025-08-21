@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import "./Contact.css";
 
 export default function Contact(): JSX.Element {
@@ -136,8 +136,7 @@ export default function Contact(): JSX.Element {
             <span className="title-accent">Pitch</span> Blackoak
           </h2>
           <p className="contact-description">
-            Share a 1–2 page memo or deck. Confidential
-            by default.
+            Share a 1–2 page memo or deck. Confidential by default.
           </p>
         </div>
 

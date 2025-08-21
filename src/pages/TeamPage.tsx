@@ -1,4 +1,3 @@
-import React from "react";
 import Team from "../components/Team";
 import Reveal from "../components/Reveal";
 import Navbar from "../components/Navbar";

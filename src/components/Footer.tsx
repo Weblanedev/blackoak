@@ -1,4 +1,3 @@
-import React from "react";
 import "./Footer.css";
 
 export default function Footer(): JSX.Element {
@@ -139,18 +138,10 @@ export default function Footer(): JSX.Element {
         <div className="container">
           <div className="footer-bottom-content">
             <div className="footer-links">
-              <a className="footer-link">
-                Privacy Policy
-              </a>
-              <a className="footer-link">
-                Terms of Service
-              </a>
-              <a className="footer-link">
-                Cookie Policy
-              </a>
-              <a className="footer-link">
-                Accessibility
-              </a>
+              <a className="footer-link">Privacy Policy</a>
+              <a className="footer-link">Terms of Service</a>
+              <a className="footer-link">Cookie Policy</a>
+              <a className="footer-link">Accessibility</a>
             </div>
             <div className="footer-legal">
               <p>&copy; 2024 Blackoak Capital. All rights reserved.</p>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { getAssetUrl } from "../lib/images";
 import Carousel from "./Carousel";
 import Navbar from "./Navbar";

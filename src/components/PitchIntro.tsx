@@ -1,4 +1,3 @@
-import React from "react";
 import "./PitchIntro.css";
 
 export default function PitchIntro(): JSX.Element {

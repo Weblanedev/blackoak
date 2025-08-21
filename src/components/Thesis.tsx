@@ -1,4 +1,3 @@
-import React from "react";
 import fintechImage from "../assets/fintech.jpg";
 import educationImage from "../assets/education.jpg";
 import energyImage from "../assets/energy.jpg";
@@ -46,7 +45,8 @@ export default function Thesis() {
                 lineHeight: 1.2,
               }}
             >
-              Building Africa's digital infrastructure, one investment at a time.
+              Building Africa's digital infrastructure, one investment at a
+              time.
             </h2>
             <p
               className="work-description"

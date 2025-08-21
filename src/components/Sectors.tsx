@@ -1,10 +1,6 @@
-import { getAssetUrl } from "../lib/images";
 import "./Sectors.css";
-import { useNavigate } from "react-router-dom";
 
 export default function Sectors(): JSX.Element {
-  const navigate = useNavigate();
-
   const sectors = [
     {
       name: "Fintech",

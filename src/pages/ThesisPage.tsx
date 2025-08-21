@@ -1,4 +1,3 @@
-import React from "react";
 import Reveal from "../components/Reveal";
 import Navbar from "../components/Navbar";
 import "./ThesisPage.css";
