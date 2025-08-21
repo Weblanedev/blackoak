@@ -1,4 +1,24 @@
-# React + TypeScript + Vite
+# Blackoak Ventures Website
+
+Image guide (drop files under `src/assets/`):
+
+- hero/hero.jpg
+- backgrounds/africa.jpg
+- sectors/fintech.jpg
+- sectors/banking.jpg
+- sectors/education.jpg
+- sectors/energy.jpg
+- team/ada-okoye.jpg
+- team/kwame-mensah.jpg
+- team/lara-adeyemi.jpg
+- logos/payweave.png (or .svg)
+- logos/gridstack.png
+- logos/edubridge.png
+- logos/corenest.png
+- logos/novacredit.png
+- logos/lumina.png
+
+Files are optional; components gracefully fallback when missing.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -17,12 +37,12 @@ If you are developing a production application, we recommend updating the config
 export default {
   // other rules...
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.app.json"],
     tsconfigRootDir: __dirname,
   },
-}
+};
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
