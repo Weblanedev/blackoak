@@ -43,6 +43,7 @@ export default function Thesis() {
                 color: "var(--text)",
                 margin: "0 0 20px 0",
                 lineHeight: 1.2,
+                background: "none",
               }}
             >
               Building Africa's digital infrastructure, one investment at a
@@ -80,6 +81,8 @@ export default function Thesis() {
           style={{
             margin: "80px 0",
             padding: "40px 0",
+            borderRadius: "24px",
+            overflow: "hidden",
           }}
         >
           <h3
@@ -102,6 +105,8 @@ export default function Thesis() {
               gap: "40px",
               maxWidth: "1200px",
               margin: "0 auto",
+              borderRadius: "24px",
+              overflow: "hidden",
             }}
           >
             {/* Stage 1 - Define */}
