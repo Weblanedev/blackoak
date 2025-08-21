@@ -168,14 +168,14 @@ export default function Footer(): JSX.Element {
       </div>
 
       {/* Decorative Elements */}
-      <div className="footer-decoration">
+      {/* <div className="footer-decoration">
         <div className="decoration-line"></div>
         <div className="decoration-dots">
           <span className="dot"></span>
           <span className="dot"></span>
           <span className="dot"></span>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 }
