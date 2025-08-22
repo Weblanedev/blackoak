@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { getAssetUrl } from "../lib/images";
 import Carousel from "./Carousel";
-import Navbar from "./Navbar";
 
 export default function Hero(): JSX.Element {
   const [isVisible, setIsVisible] = useState(false);
@@ -116,10 +115,7 @@ export default function Hero(): JSX.Element {
         </Carousel>
       </div>
 
-      {/* Transparent Navbar */}
-      <div style={{ position: "relative", zIndex: 10 }}>
-        <Navbar />
-      </div>
+
 
       {/* Content Overlay */}
       <div
