@@ -9,14 +9,14 @@ export default function Hero(): JSX.Element {
     setIsVisible(true);
   }, []);
 
-  // Add auto-scroll styles immediately
+  // Add simple auto-scroll for sectors
   useEffect(() => {
     const style = document.createElement("style");
     style.textContent = `
       @keyframes autoScroll {
-        0%, 20% { transform: translateY(0); }
-        40%, 60% { transform: translateY(-200px); }
-        80%, 100% { transform: translateY(0); }
+        0%, 25% { transform: translateY(0); }
+        50% { transform: translateY(-80px); }
+        75%, 100% { transform: translateY(0); }
       }
     `;
     document.head.appendChild(style);
@@ -61,244 +61,140 @@ export default function Hero(): JSX.Element {
   ];
 
   return (
-    <header
-      className="hero-section"
-      style={{
-        position: "relative",
-        minHeight: "100vh",
-        width: "100vw",
-        marginLeft: "calc(-50vw + 50%)",
-        marginRight: "calc(-50vw + 50%)",
-      }}
-    >
+    <header className="relative min-h-screen w-screen -ml-[calc(50vw-50%)] -mr-[calc(50vw-50%)]">
       {/* Full Background Carousel */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          zIndex: 0,
-        }}
-      >
+      <div className="absolute inset-0 z-0">
         <Carousel
           height={800}
           autoPlayMs={5000}
-          showArrows={true}
+          showArrows={false}
           showIndicators={false}
         >
           {carouselImages.map((imageName, index) => (
-            <div key={index} style={{ position: "relative", height: "100%" }}>
+            <div key={index} className="relative h-full">
               <img
                 src={getAssetUrl(imageName)}
                 alt={`Hero background ${index + 1}`}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                }}
+                className="w-full h-full object-cover block"
               />
-              <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  background: "rgba(13, 15, 18, 0.6)",
-                }}
-              />
+              <div className="absolute inset-0 bg-black/60" />
             </div>
           ))}
         </Carousel>
       </div>
 
-
-
       {/* Content Overlay */}
-      <div
-        className="container"
-        style={{
-          position: "relative",
-          zIndex: 1,
-          paddingTop: "140px",
-          paddingBottom: "100px",
-        }}
-      >
-        <div className="grid-2" style={{ gap: "80px", alignItems: "center" }}>
+      <div className="container relative z-0 pb-24 md:pt-36 md:pb-28">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-20 items-center pt-40 lg:pt-0">
           <div>
             <div
-              className="pill"
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                transition: "all 0.6s ease 0.1s",
-                marginBottom: "24px",
-              }}
+              className={`pill mb-6 transition-all duration-600 ease-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-5"
+              }`}
+              style={{ transitionDelay: "0.1s" }}
             >
               Early-stage VC • Africa
             </div>
             <h1
-              style={{
-                margin: "0 0 32px 0",
-                fontSize: 56,
-                lineHeight: 1.1,
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                transition: "all 0.6s ease 0.2s",
-                fontWeight: "700",
-              }}
+              className={`text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 md:mb-8 transition-all duration-600 ease-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-5"
+              }`}
+              style={{ transitionDelay: "0.2s" }}
             >
-              Powering Africa’s future: finance, education & energy founders.
+              Powering Africa's future: finance, education & energy founders.
             </h1>
             <p
-              className="muted"
-              style={{
-                fontSize: 20,
-                maxWidth: 640,
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                transition: "all 0.6s ease 0.3s",
-                marginBottom: "40px",
-                lineHeight: 1.6,
-              }}
+              className={`muted text-base md:text-lg lg:text-xl max-w-2xl lg:max-w-3xl mb-8 md:mb-10 leading-relaxed transition-all duration-600 ease-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-5"
+              }`}
+              style={{ transitionDelay: "0.3s" }}
             >
               We invest pre-seed to Series A in category-defining companies
               across fintech, banking, education and energy — the rails of
               Africa's digital economy.
             </p>
             <div
-              style={{
-                display: "flex",
-                gap: 16,
-                marginBottom: "32px",
-                flexWrap: "wrap",
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                transition: "all 0.6s ease 0.4s",
-              }}
+              className={`flex gap-4 mb-6 md:mb-8 flex-wrap transition-all duration-600 ease-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-5"
+              }`}
+              style={{ transitionDelay: "0.4s" }}
             >
               <a
                 href="/contact"
-                className="btn btn-primary"
-                style={{ fontSize: "16px", padding: "16px 24px" }}
+                className="btn btn-primary text-sm md:text-base px-4 md:px-6 py-3 md:py-4"
               >
                 Pitch Your Company
               </a>
               <a
                 href="#thesis"
-                className="btn"
-                style={{ fontSize: "16px", padding: "16px 24px" }}
+                className="btn text-sm md:text-base px-4 md:px-6 py-3 md:py-4"
               >
                 Read Our Thesis
               </a>
             </div>
             <div
-              style={{
-                display: "flex",
-                gap: 16,
-                flexWrap: "wrap",
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                transition: "all 0.6s ease 0.5s",
-              }}
+              className={`flex gap-4 flex-wrap transition-all duration-600 ease-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-5"
+              }`}
+              style={{ transitionDelay: "0.5s" }}
             >
-              <div
-                className="pill"
-                style={{ fontSize: "14px", padding: "8px 16px" }}
-              >
+              <div className="pill text-xs md:text-sm px-3 md:px-4 py-2">
                 Early-stage support
               </div>
-              <div
-                className="pill"
-                style={{ fontSize: "14px", padding: "8px 16px" }}
-              >
+              <div className="pill text-xs md:text-sm px-3 md:px-4 py-2">
                 Lead or follow
               </div>
-              <div
-                className="pill"
-                style={{ fontSize: "14px", padding: "8px 16px" }}
-              >
+              <div className="pill text-xs md:text-sm px-3 md:px-4 py-2">
                 Operator support
               </div>
             </div>
           </div>
-          <div style={{ position: "relative", height: "100%" }}>
+
+          {/* Focus Areas Card - Hidden on mobile, shown on larger screens */}
+          <div className="hidden lg:block relative h-full">
             <div
+              className={`absolute bottom-0 right-0 rounded-3xl p-6 h-96 w-80 transition-all duration-600 ease-out cursor-pointer ${
+                isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
+              }`}
               style={{
-                borderRadius: "24px",
-                padding: "24px",
-                height: "400px",
-                width: "320px",
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "scale(1)" : "scale(0.8)",
-                transition: "all 0.6s ease 0.6s",
-                cursor: "pointer",
+                transitionDelay: "0.6s",
                 animation: isVisible ? "float 3s ease-in-out infinite" : "none",
-                position: "absolute",
-                bottom: "0",
-                right: "0",
-                overflow: "hidden",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform =
                   "scale(1.02) translateY(-8px)";
                 e.currentTarget.style.boxShadow = "0 25px 50px rgba(0,0,0,0.5)";
-                e.currentTarget.style.borderColor = "rgba(255,255,255,0.25)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = "scale(1) translateY(0)";
                 e.currentTarget.style.boxShadow = "none";
-                e.currentTarget.style.borderColor = "rgba(255,255,255,0.15)";
               }}
             >
               {/* Header Section */}
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  marginBottom: "32px",
-                  paddingBottom: "24px",
-                  borderBottom: "1px solid rgba(255,255,255,0.1)",
-                }}
-              >
+              <div className="flex justify-between items-center mb-8 pb-6 border-b border-white/10">
                 <div>
-                  <h3
-                    style={{
-                      fontSize: "24px",
-                      fontWeight: "700",
-                      color: "white",
-                      margin: "0 0 8px 0",
-                    }}
-                  >
+                  <h3 className="text-2xl font-bold text-white mb-2">
                     Our Focus Areas
                   </h3>
-                  <p
-                    style={{
-                      fontSize: "14px",
-                      color: "rgba(255,255,255,0.7)",
-                      margin: "0",
-                    }}
-                  >
+                  <p className="text-sm text-white/70">
                     Building Africa's digital economy
                   </p>
                 </div>
                 <div
+                  className="w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white"
                   style={{
-                    width: "48px",
-                    height: "48px",
-                    borderRadius: "50%",
                     background:
                       "linear-gradient(135deg, var(--accent), var(--accent-2))",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: "20px",
-                    fontWeight: "700",
-                    color: "white",
                   }}
                 >
                   4
@@ -307,330 +203,113 @@ export default function Hero(): JSX.Element {
 
               {/* Sectors Grid */}
               <div
+                className="flex flex-col px-1 overflow-hidden"
                 style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "24px",
-                  height: "calc(100% - 100px)",
-                  padding: "0 4px",
-                  animation: "autoScroll 10s ease-in-out infinite",
+                  height: "calc(100% - -20px)",
+                  animation: "autoScroll 15s ease-in-out infinite",
                 }}
               >
                 {/* Fintech Row */}
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "16px",
-                    padding: "20px",
-                    borderRadius: "16px",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                    transition: "all 0.3s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateX(8px)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateX(0)";
-                  }}
-                >
+                <div className="flex items-center gap-4 p-5 rounded-2xl transition-all duration-300 ease-in-out hover:translate-x-2">
                   <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold text-white"
                     style={{
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
                       background:
                         "linear-gradient(135deg, var(--accent), #ff6b6b)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
                     }}
                   >
                     💳
                   </div>
                   <div>
-                    <h4
-                      style={{
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        color: "white",
-                        margin: "0 0 6px 0",
-                      }}
-                    >
+                    <h4 className="text-lg font-semibold text-white mb-1.5">
                       {sectors[0].name}
                     </h4>
-                    <p
-                      style={{
-                        fontSize: "14px",
-                        color: "rgba(255,255,255,0.7)",
-                        margin: "0",
-                      }}
-                    >
+                    <p className="text-sm text-white/70">
                       {sectors[0].description}
                     </p>
                   </div>
                 </div>
 
                 {/* Banking Row */}
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "16px",
-                    padding: "20px",
-                    borderRadius: "16px",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                    transition: "all 0.3s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateX(8px)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateX(0)";
-                  }}
-                >
+                <div className="flex items-center gap-4 p-5 rounded-2xl transition-all duration-300 ease-in-out hover:translate-x-2">
                   <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold text-white"
                     style={{
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
                       background:
                         "linear-gradient(135deg, var(--accent-2), #4ecdc4)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
                     }}
                   >
                     🏦
                   </div>
                   <div>
-                    <h4
-                      style={{
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        color: "white",
-                        margin: "0 0 6px 0",
-                      }}
-                    >
+                    <h4 className="text-lg font-semibold text-white mb-1.5">
                       {sectors[1].name}
                     </h4>
-                    <p
-                      style={{
-                        fontSize: "14px",
-                        color: "rgba(255,255,255,0.7)",
-                        margin: "0",
-                      }}
-                    >
+                    <p className="text-sm text-white/70">
                       {sectors[1].description}
                     </p>
                   </div>
                 </div>
 
                 {/* Education Row */}
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "16px",
-                    padding: "20px",
-                    borderRadius: "16px",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                    transition: "all 0.3s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateX(8px)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateX(0)";
-                  }}
-                >
+                <div className="flex items-center gap-4 p-5 rounded-2xl transition-all duration-300 ease-in-out hover:translate-x-2">
                   <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold text-white"
                     style={{
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
                       background: "linear-gradient(135deg, #4ecdc4, #44a08d)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
                     }}
                   >
                     🎓
                   </div>
                   <div>
-                    <h4
-                      style={{
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        color: "white",
-                        margin: "0 0 6px 0",
-                      }}
-                    >
+                    <h4 className="text-lg font-semibold text-white mb-1.5">
                       {sectors[2].name}
                     </h4>
-                    <p
-                      style={{
-                        fontSize: "14px",
-                        color: "rgba(255,255,255,0.7)",
-                        margin: "0",
-                      }}
-                    >
+                    <p className="text-sm text-white/70">
                       {sectors[2].description}
                     </p>
                   </div>
                 </div>
 
                 {/* Energy Row */}
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "16px",
-                    padding: "20px",
-                    borderRadius: "16px",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                    transition: "all 0.3s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateX(8px)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateX(0)";
-                  }}
-                >
+                <div className="flex items-center gap-4 p-5 rounded-2xl transition-all duration-300 ease-in-out hover:translate-x-2">
                   <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold text-white"
                     style={{
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
                       background: "linear-gradient(135deg, #ff6b6b, #ffa726)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
                     }}
                   >
                     ⚡
                   </div>
                   <div>
-                    <h4
-                      style={{
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        color: "white",
-                        margin: "0 0 6px 0",
-                      }}
-                    >
+                    <h4 className="text-lg font-semibold text-white mb-1.5">
                       {sectors[3].name}
                     </h4>
-                    <p
-                      style={{
-                        fontSize: "14px",
-                        color: "rgba(255,255,255,0.7)",
-                        margin: "0",
-                      }}
-                    >
+                    <p className="text-sm text-white/70">
                       {sectors[3].description}
                     </p>
                   </div>
                 </div>
 
                 {/* Stats Row */}
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    padding: "20px",
-                    background: "rgba(255,255,255,0.03)",
-                    borderRadius: "16px",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                  }}
-                >
-                  <div style={{ textAlign: "center" }}>
-                    <div
-                      style={{
-                        fontSize: "24px",
-                        fontWeight: "700",
-                        color: "white",
-                        marginBottom: "4px",
-                      }}
-                    >
-                      4
-                    </div>
-                    <div
-                      style={{
-                        fontSize: "12px",
-                        color: "rgba(255,255,255,0.6)",
-                      }}
-                    >
-                      Focus Areas
-                    </div>
+                <div className="flex justify-around items-center p-5 rounded-2xl">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-white mb-1">4</div>
+                    <div className="text-xs text-white/60">Focus Areas</div>
                   </div>
-                  <div
-                    style={{
-                      width: "1px",
-                      height: "40px",
-                      background: "rgba(255,255,255,0.1)",
-                    }}
-                  />
-                  <div style={{ textAlign: "center" }}>
-                    <div
-                      style={{
-                        fontSize: "24px",
-                        fontWeight: "700",
-                        color: "white",
-                        marginBottom: "4px",
-                      }}
-                    >
+                  <div className="w-px h-10 bg-white/10" />
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-white mb-1">
                       24+
                     </div>
-                    <div
-                      style={{
-                        fontSize: "12px",
-                        color: "rgba(255,255,255,0.6)",
-                      }}
-                    >
-                      Portfolio
-                    </div>
+                    <div className="text-xs text-white/60">Portfolio</div>
                   </div>
-                  <div
-                    style={{
-                      width: "1px",
-                      height: "40px",
-                      background: "rgba(255,255,255,0.1)",
-                    }}
-                  />
-                  <div style={{ textAlign: "center" }}>
-                    <div
-                      style={{
-                        fontSize: "24px",
-                        fontWeight: "700",
-                        color: "white",
-                        marginBottom: "4px",
-                      }}
-                    >
+                  <div className="w-px h-10 bg-white/10" />
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-white mb-1">
                       25+
                     </div>
-                    <div
-                      style={{
-                        fontSize: "12px",
-                        color: "rgba(255,255,255,0.6)",
-                      }}
-                    >
-                      Companies
-                    </div>
+                    <div className="text-xs text-white/60">Companies</div>
                   </div>
                 </div>
               </div>

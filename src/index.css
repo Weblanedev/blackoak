@@ -101,11 +101,6 @@ a {
   margin-bottom: 40px;
 }
 
-/* Hero Section - Keep existing dark background */
-.hero-section {
-  background: var(--bg);
-}
-
 /* Enhanced section backgrounds with more distinct patterns */
 .thesis-section {
   background: var(--bg-elev);
