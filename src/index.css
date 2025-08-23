@@ -2310,3 +2310,66 @@ a {
     background-position: 100% 50%;
   }
 }
+
+/* Hero headline text improvements */
+.hero-headline {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.1;
+  max-width: 100%;
+}
+
+.hero-headline div {
+  display: block;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.hero-headline div:last-child {
+  margin-bottom: 0;
+}
+
+.hero-headline br {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .hero-headline br {
+    display: block;
+  }
+}
+
+/* Ensure proper text spacing */
+h1,
+h2,
+h3 {
+  word-spacing: 0.02em;
+  letter-spacing: -0.01em;
+}
+
+/* Prevent text overflow */
+.text-3xl,
+.text-4xl,
+.text-5xl,
+.text-6xl {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Additional hero text improvements */
+.hero-headline span {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+/* Ensure container doesn't cause text overflow */
+.container {
+  overflow-x: hidden;
+}
+
+/* Force proper spacing for hero text */
+.hero-headline .mb-2 {
+  margin-bottom: 0.5rem !important;
+}
