@@ -8,11 +8,13 @@ export default function PitchIntro(): JSX.Element {
             {/* Left Column - VC Insights */}
             <div className="flex flex-col gap-8">
               <div className="bg-white/5 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:border-white/20 hover:shadow-2xl backdrop-blur-sm">
-                <div className="text-4xl mb-5 block">🚀</div>
-                <h3 className="text-2xl font-semibold mb-4 text-[var(--text)]">
+                <div className="text-5xl mb-5 block text-center lg:text-left">
+                  🚀
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-bold text-[var(--text)] mb-4 leading-tight text-center lg:text-left">
                   Why Venture Capital?
                 </h3>
-                <p className="text-[var(--muted)] leading-relaxed mb-6 text-base">
+                <p className="text-sm lg:text-base text-[var(--muted)] leading-relaxed mb-5 flex-1 text-center lg:text-left">
                   Venture capital isn't just about funding—it's about building
                   the future together. We provide strategic guidance, industry
                   connections, and operational support to help founders scale
@@ -39,11 +41,13 @@ export default function PitchIntro(): JSX.Element {
               </div>
 
               <div className="bg-white/5 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:border-white/20 hover:shadow-2xl backdrop-blur-sm">
-                <div className="text-4xl mb-5 block">🌍</div>
-                <h3 className="text-2xl font-semibold mb-4 text-[var(--text)]">
+                <div className="text-5xl mb-5 block text-center lg:text-left">
+                  🌍
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-bold text-[var(--text)] mb-4 leading-tight text-center lg:text-left">
                   Access to Opportunities
                 </h3>
-                <p className="text-[var(--muted)] leading-relaxed mb-6 text-base">
+                <p className="text-sm lg:text-base text-[var(--muted)] leading-relaxed mb-5 flex-1 text-center lg:text-left">
                   Venture capital opens doors to markets, talent, and resources
                   that would otherwise be out of reach. We help founders access
                   the African ecosystem and connect with the right partners to
