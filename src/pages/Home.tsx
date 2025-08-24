@@ -11,8 +11,6 @@ export default function Home(): JSX.Element {
       <Thesis />
       <hr className="section-divider" />
       <Sectors />
-      {/* <Portfolio /> */}
-      {/* <Team /> */}
       <hr className="section-divider" />
       <PitchIntro />
     </div>
