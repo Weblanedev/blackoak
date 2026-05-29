@@ -116,7 +116,7 @@ export default function Hero(): JSX.Element {
               style={{ transitionDelay: "0.3s" }}
             >
               We invest pre-seed to Series A in category-defining companies
-              across fintech, banking, education and energy — the rails of
+              across fintech, banking, education and energy, the rails of
               Africa's digital economy.
             </p>
             <div

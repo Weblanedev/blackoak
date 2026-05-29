@@ -15,7 +15,7 @@ export default function PitchIntro(): JSX.Element {
                   Why Venture Capital?
                 </h3>
                 <p className="text-sm lg:text-base text-[var(--muted)] leading-relaxed mb-5 flex-1 text-center lg:text-left">
-                  Venture capital isn't just about funding—it's about building
+                  Venture capital isn't just about funding, it's about building
                   the future together. We provide strategic guidance, industry
                   connections, and operational support to help founders scale
                   their vision into reality.
